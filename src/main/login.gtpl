@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>Texas Poker Online</title>
+		<title>Texas Poker Online!!!</title>
 	</head>
 
 	<style type='text/css'>
@@ -17,7 +17,7 @@
 		<header style="margin:30px;">
 			<center><h1 style="color:#FFFFFF;font-family:verdana;">Texas Poker Online</h1></center>
 		</header>
-	
+
 	<form action="GameStart" method="post"><center>
 		<div style="background-color:#363636;width:900px;height:330px">
 			<div style="text-align:center;float:left;width:440px;margin-left:40px;margin-top:30px;">
@@ -42,10 +42,10 @@
 			</div>
 			<div style="text-align:left;float:right;width:380px;margin-right:40px;margin-top:30px;color:#FFFFFF;font-family:Microsoft JhengHei;">
 				<p style="text-align:left;size:50px;font-size:18px;color:#FFFFFF;font-family:verdana;">Notice:</p>
-				<ul> 
-				<li>Select your team number correctly.</li> 
-				<li>Click the botton "Sign In" to get a ID.</li> 
-				<li>When every teams have signed in, the game will start.</li> 
+				<ul>
+				<li>Select your team number correctly.</li>
+				<li>Click the botton "Sign In" to get a ID.</li>
+				<li>When every teams have signed in, the game will start.</li>
 				<li>We will post two kinds of data to you:</li>
 					<ul>
 					<li>Info</li>
