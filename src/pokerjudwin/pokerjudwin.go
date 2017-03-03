@@ -9,13 +9,20 @@ import (
 func WhoIsWinner(db *sql.DB) []int {
 	//fmt.Println("PASS1")
 	//判斷贏家
+
+	//test
+	//TableSituation
+	//TableSituation
+
 	var winner []int
 	var ontable [5]int
 	var playerhd [5][2]int
 	var playerstate [5]bool
 	row := db.QueryRow("SELECT CardF1, CardF2, CardF3, CardT, CardR FROM TableSituation WHERE Phrase = 4")
 	err := row.Scan(&ontable[0], &ontable[1], &ontable[2], &ontable[3], &ontable[4])
-	//fmt.Println(ontable[0], ", ", ontable[1], ", ", ontable[2], ", ", ontable[3], ", ", ontable[4])
+//
+	fmt.Println(ontable[0], ", ", ontable[1], ", ", ontable[2], ", ", ontable[3], ", ", ontable[4])
+//
 	checkErr(err)
 	rows, _ := db.Query("SELECT Card1, Card2, Action FROM PlayerInfo")
 	i := 0

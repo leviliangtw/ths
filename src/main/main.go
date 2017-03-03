@@ -206,11 +206,12 @@ func GameStart(rw http.ResponseWriter, req *http.Request) {
 func main() {
 	//設置訪問的路由
 	http.HandleFunc("/", GameStart)
-	//http.HandleFunc("/SignIn", SignIO.SignIn)
-	//http.HandleFunc("/SignOut", SignIO.SignOut)
-	//http.HandleFunc("/sayhelloName", sayhelloName)
-	//http.HandleFunc("/login", login)
-	//http.HandleFunc("/upload", upload)
+
+	http.HandleFunc("/SignIn", SignIO.SignIn)
+	http.HandleFunc("/SignOut", SignIO.SignOut)
+	http.HandleFunc("/sayhelloName", sayhelloName)
+	http.HandleFunc("/login", login)
+	http.HandleFunc("/upload", upload)
 
 	//上傳檔案
 	/*
