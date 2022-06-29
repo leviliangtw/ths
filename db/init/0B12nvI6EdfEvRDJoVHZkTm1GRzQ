@@ -1,0 +1,91 @@
+-- MySQL Administrator dump 1.4
+--
+-- ------------------------------------------------------
+-- Server version	5.6.17-log
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+
+
+--
+-- Create schema texaspoker
+--
+
+CREATE DATABASE IF NOT EXISTS texaspoker;
+USE texaspoker;
+
+--
+-- Definition of table `playerinfo`
+--
+
+DROP TABLE IF EXISTS `playerinfo`;
+CREATE TABLE `playerinfo` (
+  `ID` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `Chips` int(10) NOT NULL,
+  `Inn` int(10) unsigned NOT NULL,
+  `Role` int(10) NOT NULL,
+  `ChipsInPot` int(10) NOT NULL,
+  `Win` int(10) NOT NULL,
+  `Card1` int(10) DEFAULT NULL,
+  `Card2` int(10) DEFAULT NULL,
+  `Action` int(10) DEFAULT NULL,
+  `IP` varchar(45) NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `playerinfo`
+--
+
+/*!40000 ALTER TABLE `playerinfo` DISABLE KEYS */;
+INSERT INTO `playerinfo` (`ID`,`Chips`,`Inn`,`Role`,`ChipsInPot`,`Win`,`Card1`,`Card2`,`Action`,`IP`) VALUES 
+ (1,5044,21,5,0,0,9,32,-1,'http://localhost:9090/sayhelloName'),
+ (2,5122,21,1,25,0,29,23,-1,'http://localhost:9090/sayhelloName'),
+ (3,5144,21,2,50,0,39,12,-1,'http://localhost:9090/sayhelloName'),
+ (4,6371,21,3,0,0,22,28,-1,'http://localhost:9090/sayhelloName'),
+ (5,2970,21,4,0,0,41,11,-1,'http://localhost:9090/sayhelloName');
+/*!40000 ALTER TABLE `playerinfo` ENABLE KEYS */;
+
+
+--
+-- Definition of table `tablesituation`
+--
+
+DROP TABLE IF EXISTS `tablesituation`;
+CREATE TABLE `tablesituation` (
+  `Phrase` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `PlayerWaited` int(10) unsigned DEFAULT NULL,
+  `CardF1` int(10) unsigned DEFAULT NULL,
+  `CardF2` int(10) unsigned DEFAULT NULL,
+  `CardF3` int(10) unsigned DEFAULT NULL,
+  `CardT` int(10) unsigned DEFAULT NULL,
+  `CardR` int(10) unsigned DEFAULT NULL,
+  PRIMARY KEY (`Phrase`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tablesituation`
+--
+
+/*!40000 ALTER TABLE `tablesituation` DISABLE KEYS */;
+INSERT INTO `tablesituation` (`Phrase`,`PlayerWaited`,`CardF1`,`CardF2`,`CardF3`,`CardT`,`CardR`) VALUES 
+ (1,4,24,30,13,5,10);
+/*!40000 ALTER TABLE `tablesituation` ENABLE KEYS */;
+
+
+
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
